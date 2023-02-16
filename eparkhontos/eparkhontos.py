@@ -1,5 +1,22 @@
+# Eparkhontos, ancient Greek arkhon year formatting/parsing
+# Copyright (C) 2023 Sean Redmond
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 from eparkhontos.__version__ import __version__
 import re
+
 
 class UnparseableDateError(Exception):
     pass
@@ -80,5 +97,3 @@ def __fmt_arkhon(year):
         return f"{year * -1 + 1}/{year * -1}"
 
     return f"{year}/{year + 1}"
-
-
